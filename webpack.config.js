@@ -2,7 +2,7 @@ const path = require('path');
 const copyPlugin = require('copy-webpack-plugin');
 const obfuscator = require('webpack-obfuscator');
 
-
+// jsut a config
 
 module.exports = {
   entry: './src/index.ts',
