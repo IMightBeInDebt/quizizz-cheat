@@ -1,44 +1,6 @@
-# Quizizz-cheat
+aight in order to use the apt, ya first gotta install tampermonkey, if not, well your cooked bro but besides that you might be able to run it as a regular bookmarklet.
 
-There are two methods for retrieving answers.
+SO,
+to start, you typically need to identify the specific API endpoints, such as those for fetching quizzes or user data, and understand the required parameters like search terms, limits, or sort directions. authentication often involves submitting a request to a token endpoint to receive a session token, which then must be included in the headers of subsequent requests to interact with the platform's data
 
-1. [Fetching Quizizz API](#fetching-quizizz-api)
-2. [Sending answers as someone else](#sending-answers-as-someone-else) (old method)
-
-You can load this script automatically using a browser extension.
-- [Using Tampermonkey](#load-automatically-using-tampermonkey)
-
-# Methods
-## Fetching Quizizz API
-
-It should work in Test and Classic mode.
-1. Join Quiz
-2. Open console and paste this
-```ts
-fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/master/dist/bundle.js")
-.then((res) => res.text()
-.then((t) => eval(t)))
-```
-3. You can now close the console. The good answers should be highlighted by background opacity.
-
-## Sending answers as someone else
-
-An alternative method is more invasive. Instead of fetching Quizizz API, it sends a random answer to a current question as a different user (consuming his answer); as a response, Quizizz returns a valid answer, which is then displayed to the user.
-
-1. Join quiz, wait for first question, and open console
-2. Paste this code to the console
-```ts
-fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/oldmethod/dist/bundle.js")
-.then((res) => res.text()
-.then((t) => eval(t)))
-```
-3. Enter the user name of any other player (the user won't get points even if they sent a valid answer).
-4. Go to step 2
-
-### Load automatically using Tampermonkey
-1. Install the browser extension on **https://www.tampermonkey.net/**
-2. Create a new user script and paste the contents of [scripts/tampermonkey-alternative-method.js](scripts/tampermonkey-alternative-method.js)
-3. The script should now be automatically loaded every time you enter a quizizz.
-
-As we can see on this screenshot, the answer **www.quizizz.com** has the highest opacity, indicating a valid answer.
-![screenshot](/docs/screenshot_1.png)
+so basicly you get the token of the player, you get the quiz id, you mix them togeter and get a baby, the cheat.
